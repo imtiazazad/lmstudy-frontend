@@ -14,6 +14,7 @@ import Login from "./pages/Authentication/Login/Login";
 import Register from "./pages/Authentication/Register/Register";
 import BecomeInstructor from "./component-I/Instructors/BecomeInstructor";
 import LeftSideMenu from "./Components-Nahid/LeftSideMenu/LeftSideMenu";
+import Checkout from "./component-jahid/Checkout";
 
 
 function App() {
@@ -37,8 +38,9 @@ function App() {
         <Route path="/becomeinstructor" element={<BecomeInstructor />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
-    </div> 
+    </div>
   );
 }
 

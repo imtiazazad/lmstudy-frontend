@@ -23,9 +23,8 @@ export default function Navbar() {
         </div>
 
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-            open ? "top-16 " : "top-[-490px]"
-          }
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-16 " : "top-[-490px]"
+            }
           z-50
           `}
         >
@@ -75,6 +74,13 @@ export default function Navbar() {
             <Link className=" hover:text-cyan-500 duration-500" to="/login">
               <span className="hover:text-amber hover:bg-nav-pink p-1   rounded">
                 LOGIN
+              </span>
+            </Link>
+          </li>
+          <li className=" md:ml-8  md:my-0 my-7">
+            <Link className=" hover:text-cyan-500 duration-500" to="/checkout">
+              <span className="hover:text-amber hover:bg-nav-pink p-1   rounded">
+                CHECKOUT
               </span>
             </Link>
           </li>
