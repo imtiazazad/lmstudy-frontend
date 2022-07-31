@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import '../Contact/style.css'
-import Title from './Title';
+import Title from '../Event/Title';
+import { BsCalendar3 } from 'react-icons/bs';
+import { IoLocationOutline } from 'react-icons/io5';
 
 const Banner = () => {
     const [timerdays, setdays] = useState("00")
@@ -10,7 +11,7 @@ const Banner = () => {
     let interval = useRef()
 
     const startTimer = () => {
-        const countDownDate = new Date("August 31, 2022 00:00:00").getTime()
+        const countDownDate = new Date("August 25, 2022 00:00:00").getTime()
         interval = setInterval(() => {
             const now = new Date().getTime()
             const distance = countDownDate - now
@@ -49,19 +50,27 @@ const Banner = () => {
     return (
         <div>
             <div style={{
-                backgroundImage: "url(https://edusphere.radiantthemes.com/wp-content/uploads/2020/07/event-banner.jpg)"
-            }} className="bg-cover  bg-no-repeat lg:h-[500px] h-[60vh] lg:z-0 grid grid-cols-1 lg:grid-cols-2 z-40">
+                backgroundImage: "url(https://creativelayers.net/themes/educrat-html/img/event-single/bg.png)"
+            }} className="bg-cover  bg-no-repeat lg:h-[500px] h-[60vh] lg:z-0 grid grid-cols-1  z-40">
 
-                <div className=' text-white font-bold  tracking-widest leading-10 lg:mx-28 lg:my-40 mx-5 mt-10'>
-                    <h6>ENJOY WITH</h6>
-                    <h2 className=' text-5xl '>Great Upcoming Events For Our Institute</h2>
-                </div>
+                <div className=' text-white font-bold  tracking-widest leading-10 lg:mx-28 lg:my-40 mx-5 mt-10 lg:w-[600px]'>
 
-                <div class="grid grid-cols-4 gap-5 text-center lg:my-52 lg:mx-28 mx-5 my-20">
-                    {
-                        time.map((t, index) => <Title key={index} t={t} className={'bg-style'}></Title>)
-                    }
+                    <div className=' flex items-center gap-3 mb-4'>
+                        <BsCalendar3 />
+                        25 August, 2022
 
+                        <IoLocationOutline />
+                        London, UK
+                    </div>
+                  
+                    <h2 className=' text-5xl '>Build Education Website Using WordPress</h2>
+
+                    <div class="grid grid-cols-4 font-bold mt-5">
+                        {
+                            time.map((t, index) => <Title key={index} t={t} className={''}></Title>)
+                        }
+
+                    </div>
                 </div>
             </div>
         </div>
